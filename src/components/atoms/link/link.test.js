@@ -10,7 +10,7 @@ it("renders without crashing", () => {
 
 it("should render proper simple html", () => {
   const div = document.createElement("div");
-  const result = ReactDOM.render(<Link>tekst</Link>, div);
+  ReactDOM.render(<Link>tekst</Link>, div);
   expect(div.innerHTML).toBe("<a>tekst</a>");
   ReactDOM.unmountComponentAtNode(div);
 });
