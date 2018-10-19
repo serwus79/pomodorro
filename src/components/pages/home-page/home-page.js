@@ -1,7 +1,7 @@
 import React from "react";
 import "./home-page.scss";
-import Header from "components/templates/header";
-import Timer from "components/organisms/timer";
+import Header from "src/components/templates/header";
+import Timer from "src/components/organisms/timer";
 
 function HomePage(props) {
   return (
