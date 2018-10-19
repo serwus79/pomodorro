@@ -7,7 +7,7 @@ function HomePage(props) {
   return (
     <div>
       <Header />
-      <div class="container">
+      <div className="container">
         <Timer />
       </div>
     </div>
