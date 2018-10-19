@@ -1,9 +1,16 @@
 language: node_js
 node_js:
-  - 8
+- 8
 cache:
   directories:
-    - node_modules
+  - node_modules
 script:
-  - npm run build
-  - npm test
+- npm run build
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: yDFf0hKgFWHULl8YxMGckxKSsVOaEBHM2D1X8ejcWj8vjs8ePp28NSSsaCPA8SrXgnhM6j4aQe7GC9i50QJ4jYo1vqGnvw7ShoDu6AEkeaYle4g6JL3a1GadmCRYRVaeAXGC7Y4RvLBTTCuIGqPvO7tcLrrudI+nADW6BnNnLn0LaT+Ol8PS7lHHwJZ1ncnZUWaIofhC8V7xLSxZz4H55C/D8/PZeRLS1sPc9IIniBgjGRArxUT5wiWLJyYADU3JTKoYPDrNrNoHzuEJc6j93GTYH2Fa1SZeLylEvHMhtAbuBnGA/57vwBfFsPbH+oeDoxGfk34rbAz7iwemRHXsxk8rsnmW7tqWiUNPWkfIx8j/YVPsga5xQhAPfR8pwkcgAzpA3f3irClyDZ/p3WtHMtcElDm09yLpGcZ3GTh8C2HfpYudriZPlWWc9UM3BvGfoRHPSMH6T+2bYNQjGS4+mxtUN4Xl3RBz2DFDFn5BhpmRpl/k2l1hdIsnNQBpMtbfFfbCdRbixIO40EZVKcebZ3lnMUVE4qOhaalCKqvbhSO7TIIcV9QUj6Dd+L64f8FF4RC3nNgQUW/GtB3Tckn0J2aqohnzHHTk9IaRP/5SVEXf9D3MhL59zLRr6fIBbbiZ1YHj16noPpCKZG1HGwq8wOGQOMD8ij9jy+C2HFo1GAE=
+  app: pomodorro
+  on:
+    repo: serwus79/pomodorro
