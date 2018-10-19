@@ -3,11 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "bootstrap": "4",
-=======
     "node-sass": "^4.9.4",
->>>>>>> bf4dd5866e99a7b02a38d7c0600071cec3f6dc53
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5",
@@ -33,7 +30,7 @@
   "devDependencies": {
     "@storybook/react": "^3.4.11",
     "@storybook/addon-actions": "^3.4.11",
-    "@storybook/addon-links": "^3.4.11",
+    "@storybook/addon-links": "^3.4.11", 
     "@storybook/addons": "^3.4.11",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0"
