@@ -1,2 +1,0 @@
-# pomodorro
-Pomodoro time tracking
