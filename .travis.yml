@@ -1,17 +1,16 @@
 language: node_js
 node_js:
-  - 8
+- 8
 cache:
   directories:
-    - node_modules
+  - node_modules
 script:
-  - npm run build
-  - npm test
+- npm run build
+- npm test
 deploy:
   provider: heroku
   api_key:
-    secure: QN53RaGbNiUM9XFop5G5qAJxwsp40XZJyXhGk8xO9zH3p2jTmiEXYV7gmf+8qwIP3oy/qe403wrXCx81e7DjknMdOF9vI0h/MCwddeYD2oluH2V3a3MeA0t3YRaxAp72We8SxQgDr5/uOEOdkfHfr2dwifGITrsqb/yj5QKrlbkoZT6P3OkkCndKRytEzHkUp+PNTwt9xYiO4cVFCvHPOH6/BTxEgxQUSAJ6IbrKXlk6wbZyROFc0m7H420VhwTcfNejYBwegYHKxc3w9rOZrngHvHmVkikjfjiDW7b2ClObYpjBfYaMQ7RinBguH98qao90JbHzyYdDWOdgpGepMhi8NA8m/g08eAmXW9sNiyYGGjtI4SHTtxh9YrxZLdqP3PjLS6ZsW0/R4qkS53FXhoRNY+ni51gFyPRlBn0+yQT2SKrTOUUhHQAP1KLhQX/dLvYUW64pc7e/lg0yEVdAZpcGzMrqLlh2STARlpxDFIDjNCAqpPF9EmqowBYchcAxtL94f1qEKgr0MCtuHEVij4nESMyq71LdWM6Po3x0v2Bgsa84IPR1K7qbApc12TC5tWI/yqSGF8T4axNZ4FWluySHbHJx/JRF4rYKCCwnQXKCxW6GNdh6OTswZQ9sXvp9CGFy6tAoX5p9jVPTcKGM3hTU73NHLxEtNcEcgYOzV1Y=
-  strategy: git
+    secure: XFE7kf4nGYM5nBzrF3v1YjkAnRPRO8B9wkLm+k9x3yJdJ30NKL5YOAVgWJ5zRKQKZnQ6Xo4gQV/25B5XksCsgdZaV/977k6iGeSAkWKZ3CtuH7KArDHUfKOuaheRXKp5BdIQC2WT+pe1wTKxM4pZP5z2a35ZwSd9M5/rKa8F2KHv9/H1ivczx21Yw9I9IXEmyhKWYEqqLeKKgjdnrPw9yDRzzmq8l9GaoO15A5IcFkQU7LAflvvbCi2Pei6gM/CgpuibLSMLKR2SYom2ZMHZxAnt4U1d77Dw/G+DP7PbdZqDHL3RPbNVk8FEdbnbWrux90g2EE3h21xq4ZJr625E5LWC0lua2sb8YTpzaqrUHSSYCqDB4V9gQ3XT4Q6pBnVBTiX6W71AR5SWYWwFJEB3lC18N2Axl0/cQuZi4OQ9aJL0pplAjkNFb3V7npNfJt4MJI4HAVvzYAuCCiN2WGapFrkgW6AJhJun7s7VicVv4Lv22fkhEc5whsdkC4BWM2++tlYUc4FuFLsbFciwtkpvc/yYJeO2Cq6VEjkf/8UXyjWD6MolFgUsr2dEcPiAMlb97+HNyqipA000kc/2McuxrR0FhFQL+ib6rKKboPmaiPD2Ab9AHZ826sBsRZEg040ee9bRpZW/SWdnWy6mfhQ6VqayXoFEM6FnxTcr1uHvVRw=
   app: pomodorro
   on:
     repo: serwus79/pomodorro
