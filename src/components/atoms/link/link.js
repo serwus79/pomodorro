@@ -1,10 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
 import "./link.scss";
 
-function Link(props) {
-  return <a>{props.children}</a>;
-}
+class Link extends Component {
+  static propTypes = {};
 
-Link.propTypes = {};
+  render() {
+    return <a>{this.props.children}</a>;
+  }
+}
 
 export default Link;

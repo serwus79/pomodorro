@@ -1,19 +1,21 @@
-import React from "react";
-import "./home-page.scss";
+import React, { Component } from "react";
 import Header from "../../templates/header";
 import Timer from "../../organisms/timer";
 
-function HomePage(props) {
-  return (
-    <div>
-      <Header />
-      <div className="container">
-        <Timer />
-      </div>
-    </div>
-  );
-}
+import "./home-page.scss";
 
-HomePage.propTypes = {};
+class HomePage extends Component {
+  static propTypes = {};
+  render() {
+    return (
+      <div>
+        <Header />
+        <div className="container">
+          <Timer />
+        </div>
+      </div>
+    );
+  }
+}
 
 export default HomePage;
