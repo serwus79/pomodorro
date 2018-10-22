@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import momentPropTypes from "react-moment-proptypes";
+import ProgressBar from "../../atoms/progress-bar";
 
 export class TimerDisplay extends Component {
   static propTypes = {
@@ -40,7 +40,13 @@ export class TimerDisplay extends Component {
               {this.hhmmss(this.props.timeTotal)}
             </div>
           </div>
-          <div className="card-timeline" />
+          <ProgressBar
+            progress={Math.ceil(
+              ((this.props.timeTotal - this.props.timeRemaining) /
+                this.props.timeTotal) *
+                100
+            )}
+          />
         </div>
       </div>
     );
