@@ -1,13 +1,69 @@
 import React, { Component } from "react";
+import moment from "moment";
 import "./timer.scss";
 
 class Timer extends Component {
   static propTypes = {};
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      startTime: undefined,
+      action: "STOP",
+      timeRemaining: 0,
+      interval: undefined
+    };
+  }
+
+  countRemainingTime = () => {
+    const timeRemaining = moment.duration(moment().diff(this.startTime));
+
+    this.setState({ timeRemaining: timeRemaining.asSeconds() });
+  };
+
+  startCountdown = () => {
+    const interval = setInterval(this.countRemainingTime, 1000);
+
+    this.setState({
+      startTime: moment(),
+      action: "ACTIVE",
+      interval
+    });
+  };
+
+  stopCountdown = () => {
+    clearInterval(this.interval);
+
+    this.setState({
+      startTime: undefined,
+      action: "STOP"
+    });
+  };
+
+  pauseCountdown = () => {};
+
   render() {
     return (
       <div className="col col-md-5 col-lg-5">
+     
+        <div className="timeRemaining">{this.state.timeRemaining}</div>
         <div className="card-deck mb-3 text-center">
+          {this.state.action === "STOP" && (
+            <button type="button" onClick={this.startCountdown}>
+              Start
+            </button>
+          )}
+          {this.state.action === "START" && (
+            <button type="button" onClick={this.stopCountdown}>
+              Stop
+            </button>
+          )}
+          {this.state.action === "START" && (
+            <button type="button" onClick={this.pauseCountdown}>
+              Pause
+            </button>
+          )}
           <div className="card mb-4 shadow-sm">
             <div className="card-title mb-0">
               <p className="my-0 font-weight-bold">GroupName <span className="my-0 font-weight-normal"> - TaskName</span> </p>
