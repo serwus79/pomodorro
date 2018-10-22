@@ -21,8 +21,12 @@ class Timer extends Component {
 
   countRemainingTime = () => {
     const tmpTimeRemaining = this.state.timeRemaining - 1;
-
-    this.setState({ timeRemaining: tmpTimeRemaining });
+    this.setState({ timeRemaining: tmpTimeRemaining }, () => {
+      if (tmpTimeRemaining <= 0) {
+        this.stopCountdown();
+        alert("done");
+      }
+    });
   };
 
   startCountdown = () => {
