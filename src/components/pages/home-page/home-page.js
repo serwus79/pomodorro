@@ -10,7 +10,7 @@ class HomePage extends Component {
     return (
       <div>
         <Header />
-        <div className="container">
+        <div className="container mt-5">
           <Timer />
         </div>
       </div>
