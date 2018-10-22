@@ -12,7 +12,7 @@ it("should show 0 timeRemaining at start", () => {
   const div = document.createElement("div");
   ReactDOM.render(<Timer />, div);
 
-  expect(div.querySelector(".timeRemaining").textContent).toBe("0");
+  expect(div.querySelector("h1.card-time").textContent).toBe("00:00");
 
   ReactDOM.unmountComponentAtNode(div);
 });
