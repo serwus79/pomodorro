@@ -62,7 +62,6 @@ class Timer extends Component {
   render() {
     return (
       <div className="col col-md-5 col-lg-5">
-        <div className="timeRemaining">{this.state.timeRemaining}</div>
         <div className="card-deck mb-3 text-center">
           <div className="card mb-4 shadow-sm">
             <div className="card-title mb-0">
