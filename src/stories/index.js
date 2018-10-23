@@ -2,6 +2,7 @@ import React from "react";
 
 import { storiesOf } from "@storybook/react";
 import Link from "../components/atoms/link";
+// import Timer from "../components/organisms/timer";
 
 // storiesOf("Welcome", module).add("to Storybook", () => (
 //   <Welcome showApp={linkTo("Button")} />
@@ -19,3 +20,4 @@ import Link from "../components/atoms/link";
 //     </Button>
 //   ));
 storiesOf("Atoms/Link", module).add("with text", () => <Link>Hello Link</Link>);
+// storiesOf("Organism/Timer", module).add("init", () => <Timer />);
